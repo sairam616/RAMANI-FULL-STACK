@@ -4,6 +4,8 @@ import { Route, Switch, withRouter } from "react-router-dom";
 
 import Signup from "./Signup.js";
 import Login from "./Login.js";
+import Onboarding1 from "./Onboarding1.js";
+import Onboarding2 from "./Onboarding2.js";
 import { SnackbarError, Home } from "./components";
 
 const Routes = (props) => {
@@ -99,6 +101,14 @@ const Routes = (props) => {
         <Route
           path="/register"
           render={() => <Signup user={user} register={register} />}
+        />
+        <Route
+          path="/onboarding1"
+          render={() => <Onboarding1 onboarding1={Onboarding1} />}
+        />
+        <Route
+          path="/onboarding2"
+          render={() => <Onboarding2 onboarding2={Onboarding2} />}
         />
         <Route
           exact

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import {
   Grid,
@@ -12,7 +12,6 @@ import {
 
 const Signup = ({ user, register }) => {
   const history = useHistory();
-
   const [formErrorMessage, setFormErrorMessage] = useState({});
 
   const handleRegister = async (event) => {
@@ -29,11 +28,12 @@ const Signup = ({ user, register }) => {
       return;
     }
     await register({ username, email, password });
+    history.push("/onboarding1");
   };
 
-  useEffect(() => {
-    if (user && user.id) history.push("/home");
-  }, [user, history]);
+  // useEffect(() => {
+  //   if (user && user.id) history.push("/home");
+  // }, [user, history]);
 
   return (
     <Grid container justifyContent="center">

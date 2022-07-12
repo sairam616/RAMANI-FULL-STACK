@@ -1,0 +1,64 @@
+.mainForm{
+    border: 1px solid F7F9FD;
+    font: open-sans;
+    background-color: #F7F9FD;
+    color: #3A8DFF;
+    padding: 5%;
+    max-width:max-content;
+    margin: 20px auto;
+}
+.box{
+    width: 350px;
+}
+.mainForm2{
+    border: 1px solid F7F9FD;
+    font: open-sans;
+    background-color: #F7F9FD;
+    color: black;
+    font-weight: bolder;
+    padding: 5%;
+    max-width:max-content;
+    margin: 20px auto;
+}
+.box2{
+    width: 450px;
+}
+.FormControl{
+    width: 350px;
+    font-weight: bolder;
+}
+.FormControl:hover{
+color: #3A8DFF;
+}
+.FormControl::after{
+    color: #3A8DFF;
+}
+.textAreaControl{
+    width: 350px;
+    font-weight: bolder;
+    background-color: #F7F9FD;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    resize: none;
+}
+.button{
+float: right;
+color: darkgray;
+width: 100px;
+
+}
+.button:hover{
+    color: gray;
+}
+.finishbutton{
+    float: right;
+    width: 100px;
+}
+.backbutton{
+    width: 100px;
+}
+.errorText{
+    color: #FF3A3A;
+    font-weight: bolder;
+}

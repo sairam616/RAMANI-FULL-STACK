@@ -1,10 +1,12 @@
 import React from "react";
 import { MuiThemeProvider } from "@material-ui/core";
 import { BrowserRouter } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { theme } from "./themes/theme";
 import Routes from "./routes";
 import axios from "axios";
+import { OnboardingProvider } from "./Context/OnboardingContext";
 
 axios.interceptors.request.use(async function (config) {
   const token = await localStorage.getItem("messenger-token");
@@ -16,9 +18,11 @@ axios.interceptors.request.use(async function (config) {
 function App() {
   return (
     <MuiThemeProvider theme={theme}>
-      <BrowserRouter>
-        <Routes />
-      </BrowserRouter>
+      <OnboardingProvider>
+        <BrowserRouter>
+          <Routes />
+        </BrowserRouter>
+      </OnboardingProvider>
     </MuiThemeProvider>
   );
 }

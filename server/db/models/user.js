@@ -37,21 +37,35 @@ const User = db.define("user", {
   },
   firstName: {
     type: Sequelize.STRING,
+    allowNull: false,
+    defaultValue: "",
   },
   lastName: {
     type: Sequelize.STRING,
   },
   country: {
     type: Sequelize.STRING,
+    allowNull: false,
+    defaultValue: "",
   },
   bio: {
     type: Sequelize.STRING,
   },
   receiveNotifications: {
     type: Sequelize.BOOLEAN,
+    allowNull: false,
+    defaultValue: false,
   },
   receiveUpdates: {
     type: Sequelize.BOOLEAN,
+    allowNull: false,
+    defaultValue: false,
+  },
+  createdAt: {
+    type: Sequelize.DATE,
+  },
+  updatedAt: {
+    type: Sequelize.DATE,
   },
   completedOnboarding: {
     type: Sequelize.BOOLEAN,
